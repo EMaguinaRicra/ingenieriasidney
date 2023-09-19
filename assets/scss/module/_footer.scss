@@ -1,0 +1,256 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    background-color: #161616;
+}
+
+.footer-top {
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+.footer__widget {
+    margin-bottom: 30px;
+}
+
+.footer__widget-title {
+    color: $color-white;
+    font-size: 17px;
+    text-transform: capitalize;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.widget__newsletter-form {
+    position: relative;
+
+    .form-control {
+        font-size: 13px;
+        background-color: $color-white;
+    }
+
+    .btn {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        line-height: 26px;
+        border-radius: 50%;
+        padding: 0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.footer__widget-nav li a {
+    display: block;
+    position: relative;
+    color: $color-body;
+    font-size: 14px;
+    margin-bottom: 11px;
+
+    &:hover {
+        color: $color-theme;
+    }
+}
+
+.footer__more-info {
+    font-size: 14px;
+
+    a {
+        color: $color-theme;
+        position: relative;
+        padding-bottom: 4px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color-theme;
+            @include prefix(transition, all 0.3s ease, webkit moz ms o);
+        }
+
+        &:hover {
+            color: $color-white;
+
+            &:after {
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.footer__copyright-links {
+    li {
+        margin-right: 8px;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+            position: relative;
+            color: $color-body;
+            font-size: 14px;
+            padding-right: 10px;
+
+            &:hover {
+                color: $color-white;
+            }
+
+            &:after {
+                content: '-';
+                position: absolute;
+                top: 1px;
+                right: 0;
+                color: $color-body;
+            }
+        }
+
+        &:last-child a {
+            margin-right: 0;
+            padding-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.footer .social__icons {
+    li {
+        margin-right: 9px;
+
+        a {
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background-color: #272727;
+            color: $color-white;
+            font-size: 17px;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $color-white;
+                color: #272727;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    background-color: #121212;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 50%;
+    color: $color-white;
+    background-color: $color-theme;
+    overflow: hidden;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-dark;
+    }
+}
+
+#scrollTopBtn.actived {
+    right: 30px;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .footer__widget-about {
+        padding-right: 40px;
+    }
+
+    .footer__widget-newsletter {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .footer__widget-nav li a,
+    .footer__copyright-links li a {
+        font-size: 13px;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .footer-top {
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+
+    .footer__widget:first-of-type {
+        order: 1;
+    }
+
+    .footer__widget:last-of-type {
+        order: 2;
+    }
+
+    .footer__widget:nth-of-type(2) {
+        order: 3;
+    }
+
+    .footer__widget:nth-of-type(3) {
+        order: 4;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .footer-top {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .footer-top .footer__widget-title {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .footer .text-right {
+        text-align: left !important;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #scrollTopBtn.actived {
+        right: 20px;
+    }
+}

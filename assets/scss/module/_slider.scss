@@ -1,0 +1,210 @@
+/*------------------------
+    Slider 
+--------------------------*/
+.header-transparent+.slider {
+    margin-top: -100px;
+}
+
+.header-transparent+.slider .slide-item {
+    padding-top: 100px;
+}
+
+.slider {
+    padding: 0;
+    overflow-x: hidden;
+
+    .slide-item {
+        height: 100vh;
+    }
+
+    .slide__subtitle {
+        display: block;
+        font-family: $font-body;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 700;
+        color: $color-theme;
+        margin-bottom: 18px;
+    }
+
+    .slide__title {
+        font-size: 85px;
+        line-height: 1.2;
+        color: $color-white;
+        margin-bottom: 30px;
+    }
+
+    .slide__desc {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: $color-white;
+        max-width: 650px;
+        margin-bottom: 30px;
+    }
+
+    .btn__lg {
+        min-width: 200px;
+    }
+
+    .btn__white:before {
+        background-color: $color-theme;
+    }
+
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        text-align: left;
+        width: 100%;
+        max-width: 1140px;
+        @include prefix(transform, translateX(calc(-50% + 10px)), webkit moz ms o);
+    }
+}
+
+.slider-layout2 {
+    .slide__title {
+        font-size: 75px;
+    }
+
+    .info__slider .slick-dots {
+        position: static;
+        @include prefix(transform, translateX(0), webkit moz ms o);
+    }
+
+    .video__btn .video__player-animation {
+        border-color: $color-white;
+    }
+}
+
+.slider-layout3 {
+    .slick-dots {
+        left: 0;
+        max-width: none;
+        text-align: center;
+        @include prefix(transform, translateX(0), webkit moz ms o);
+    }
+}
+
+@media (min-width:1200px) {
+    .slider {
+        .slick-arrow.slick-next {
+            right: 30px;
+        }
+
+        .slick-arrow.slick-prev {
+            left: 30px;
+        }
+    }
+
+    .slider-layout3 {
+        .slide__title {
+            font-size: 95px;
+            margin-left: -80px;
+        }
+    }
+}
+
+@media(min-width:768px) and (max-width:1200px) {
+    .slider .slide-item {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+/* Large Size Screens */
+@include lg-screens {
+    .slider .slide__title {
+        font-size: 65px;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .slider .slide__title {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .header-transparent+.slider {
+        margin-top: 0;
+    }
+
+    .slider {
+        overflow: hidden;
+
+        .slide-item {
+            padding: 100px 10px;
+        }
+
+        .slide-item {
+            height: auto;
+        }
+    }
+}
+
+/*  Small Screens and tablets  */
+@include sm-screens {
+    .slider {
+        .slide__title {
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .slick-dots {
+            @include prefix(transform, translateX(calc(-50% + 70px)), webkit moz ms o);
+        }
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    .slider {
+        .slide__subtitle {
+            margin-bottom: 15px;
+        }
+
+        .slide__title {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .slide__desc {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+        }
+
+        .btn__lg {
+            min-width: 140px;
+        }
+
+        .slick-dots {
+            @include prefix(transform, translateX(calc(-50% + 20px)), webkit moz ms o);
+        }
+
+        .slick-arrow {
+            &:before {
+                font-size: 30px;
+            }
+
+            &.slick-prev {
+                left: -10px;
+            }
+
+            &.slick-next {
+                right: -10px;
+            }
+        }
+    }
+}

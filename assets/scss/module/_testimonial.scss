@@ -1,0 +1,222 @@
+/*----------------------------
+     Testimonial
+------------------------------*/
+.testimonial-item {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 70px;
+        width: 96px;
+        height: 71px;
+        z-index: -1;
+        background-image: url(../images/icons/quote.png);
+    }
+
+    .testimonial__desc {
+        font-size: 30px;
+        line-height: 1.5;
+        font-weight: 700;
+        font-style: italic;
+        color: $color-heading;
+        margin-bottom: 0;
+    }
+}
+
+.testimonial__meta {
+    display: block;
+
+    .testimonial__meta-title {
+        color: $color-heading;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 2px;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .testimonial__meta-desc {
+        line-height: 25px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #616161;
+        margin-bottom: 0;
+        display: block;
+    }
+}
+
+.testimonial__thumb {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 15px;
+    @include prefix(transform, scale(.8), webkit moz ms o);
+    @include prefix(transition, opacity 0.4s ease, webkit moz ms o);
+
+    img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.testimonials {
+    .heading__title {
+        font-size: 15px;
+    }
+
+    .testimonials-wrapper {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .slider-nav {
+        flex: 0 0 260px;
+        max-width: 260px;
+        max-height: 110px;
+        margin-left: -110px;
+    }
+
+    .slider-with-navs {
+        flex: 0 0 calc(100% - 260px);
+        max-width: calc(100% - 260px);
+    }
+
+    .slick-dots {
+        text-align: left;
+    }
+
+    .slick-list {
+        margin: 0;
+    }
+
+    .slick-slide {
+        margin: 0;
+    }
+
+    .slick__nav-item {
+        cursor: pointer;
+        text-align: right;
+
+        .testimonial__meta {
+            @include prefix(transition, opacity 0.4s ease, webkit moz ms o);
+
+            @media(min-width:992px) {
+                opacity: 0;
+            }
+        }
+
+        &.slick-current {
+            .testimonial__meta {
+                opacity: 1;
+            }
+
+            .testimonial__thumb {
+                @include prefix(transform, scale(1), webkit moz ms o);
+                @include prefix(transition, transform 0.4s ease, webkit moz ms o);
+            }
+        }
+
+        &:not(.slick-current) {
+            @include prefix(transform, translateX(25px), webkit moz ms o);
+        }
+    }
+}
+
+.testimonials-layout2 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+@media (max-width:992px) {
+    .testimonials .slick__nav-item {
+        margin-left: 2px;
+
+        &:not(.slick-current) {
+            @include prefix(transform, translateX(0), webkit moz ms o);
+        }
+    }
+
+    .testimonials .heading__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .testimonials .heading {
+        padding-left: 160px;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .testimonial-item .testimonial__desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (max-width:992px) {
+    .testimonial-item .testimonial__desc {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .testimonials {
+        .testimonials-wrapper {
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .slick__nav-item {
+            text-align: left;
+            margin: 0;
+        }
+
+        .slider-with-navs {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .slider-nav {
+            margin-left: 0;
+
+            .slick-list {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    .testimonial__meta .testimonial__meta-title {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+}
+
+/* Custom Media in Mobile Phones */
+@media (max-width: 380px) {
+    .testimonial__thumb {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 0;
+    }
+
+    .testimonial__meta .testimonial__meta-title,
+    .testimonial__meta .testimonial__meta-desc {
+        font-size: 11px;
+    }
+
+    .testimonials .slider-nav {
+        max-height: 80px;
+    }
+}

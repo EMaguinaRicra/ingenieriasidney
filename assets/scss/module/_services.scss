@@ -1,0 +1,167 @@
+/*-----------------------
+    Services 
+--------------------------*/
+.service-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.04);
+    @include prefix(transition, all .4s linear, webkit moz ms o);
+    background-color: #fff;
+    padding: 50px 40px 50px;
+
+
+    .service__icon {
+        margin-bottom: 50px;
+
+        i {
+            font-size: 65px;
+            line-height: 1;
+            color: $color-theme;
+            @include prefix(transition, all .2s linear, webkit moz ms o);
+        }
+    }
+
+    .service__title {
+        position: relative;
+        font-size: 24px;
+        padding-bottom: 36px;
+        margin-bottom: 35px;
+        @include prefix(transition, all .2s linear, webkit moz ms o);
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #eaeaea;
+            @include prefix(transition, all .2s linear, webkit moz ms o);
+        }
+    }
+
+    .service__desc {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0;
+        @include prefix(transition, all .2s linear, webkit moz ms o);
+    }
+
+    .btn__link {
+        margin-top: 14px;
+        height: 32px;
+        line-height: 32px;
+
+        i {
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            background-color: $color-theme;
+            color: $color-white;
+            border-radius: 50%;
+            display: inline-block;
+            @include prefix(transition, all 0.3s linear, webkit moz ms o);
+        }
+    }
+
+    .service__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .service__overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        text-align: center;
+        z-index: 1;
+        @include prefix(transition, all .5s linear, webkit moz ms o);
+    }
+
+    &:hover {
+        @include prefix(transform, translateY(-5px), webkit moz ms o);
+
+        .service__overlay {
+            opacity: 1;
+        }
+
+        .service__title,
+        .service__desc,
+        .service__icon i,
+        .btn__link {
+            color: $color-white;
+        }
+
+        .service__title:after {
+            background-color: $color-white;
+        }
+
+        .btn__link i {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: $color-theme;
+            background-color: $color-white;
+        }
+    }
+}
+
+.services-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 50%;
+}
+
+@media (min-width:992px) {
+
+    .services-layout2 {
+        padding-bottom: 160px;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .service-item {
+        .service__icon {
+            margin-bottom: 15px;
+
+            i {
+                font-size: 50px;
+            }
+        }
+
+        .service__title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .service-item {
+        padding: 20px;
+
+        .service__title {
+            font-size: 18px;
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+        }
+
+        .service__icon {
+            margin-bottom: 20px;
+
+            i {
+                font-size: 45px;
+            }
+        }
+    }
+}
