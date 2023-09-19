@@ -1,0 +1,77 @@
+[16-Sep-2023 18:28:38 UTC] PHP Warning:  include(/ingenieriasidney/includes/footer.php): Failed to open stream: No such file or directory in /home/ingenie5/public_html/index.php on line 421
+[16-Sep-2023 18:28:38 UTC] PHP Warning:  include(/ingenieriasidney/includes/footer.php): Failed to open stream: No such file or directory in /home/ingenie5/public_html/index.php on line 421
+[16-Sep-2023 18:28:38 UTC] PHP Warning:  include(): Failed opening '/ingenieriasidney/includes/footer.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/ingenie5/public_html/index.php on line 421
+[16-Sep-2023 20:58:14 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 20:58:14 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:29
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 20:58:24 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 20:58:24 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:29
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:01:09 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:01:09 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:29
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:02:02 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:02:02 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:29
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:03:06 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:03:06 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:29
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:04:10 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:04:10 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:29
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 29
+[16-Sep-2023 21:07:09 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 28
+[16-Sep-2023 21:07:09 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:28
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 28
+[16-Sep-2023 21:15:07 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 28
+[16-Sep-2023 21:15:07 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:28
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 28
+[16-Sep-2023 21:17:16 UTC] PHP Warning:  Undefined variable $strpos in /home/ingenie5/public_html/includes/header.php on line 28
+[16-Sep-2023 21:17:16 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /home/ingenie5/public_html/includes/header.php:28
+Stack trace:
+#0 /home/ingenie5/public_html/index.php(20): include()
+#1 {main}
+  thrown in /home/ingenie5/public_html/includes/header.php on line 28
+[16-Sep-2023 22:42:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/ingenie5/public_html/conexion.php:8
+Stack trace:
+#0 /home/ingenie5/public_html/conexion.php(8): mysqli_connect()
+#1 {main}
+  thrown in /home/ingenie5/public_html/conexion.php on line 8
+[16-Sep-2023 22:42:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/ingenie5/public_html/conexion.php:8
+Stack trace:
+#0 /home/ingenie5/public_html/conexion.php(8): mysqli_connect()
+#1 {main}
+  thrown in /home/ingenie5/public_html/conexion.php on line 8
+[16-Sep-2023 22:42:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/ingenie5/public_html/conexion.php:8
+Stack trace:
+#0 /home/ingenie5/public_html/conexion.php(8): mysqli_connect()
+#1 {main}
+  thrown in /home/ingenie5/public_html/conexion.php on line 8
+[16-Sep-2023 22:45:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/ingenie5/public_html/conexion.php:8
+Stack trace:
+#0 /home/ingenie5/public_html/conexion.php(8): mysqli_connect()
+#1 {main}
+  thrown in /home/ingenie5/public_html/conexion.php on line 8
