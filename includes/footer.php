@@ -68,8 +68,8 @@
             <div class="col-sm-12 col-md-12 col-lg-12 d-flex flex-wrap justify-content-between">
               <nav>
                 <ul class="footer__copyright-links list-unstyled d-flex flex-wrap mb-0">
-                  <li><a href="#">Términos y Condiciones </a></li>
-                  <li><a href="#">Política de Privacidad</a></li>
+                  <li><a href="<?php if (strpos($variable, "index") == false) echo "../" ?>t/terminos-condiciones.php">Términos y Condiciones </a></li>
+                  <li><a href="<?php if (strpos($variable, "index") == false) echo "../" ?>t/privacidad.php">Política de Privacidad</a></li>
                 </ul>
               </nav>
               <p class="mb-0 color-white"> &copy; 2023 Ingeniería Sidney. Hecho con 🤍 por
